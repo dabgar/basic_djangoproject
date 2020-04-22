@@ -1,0 +1,12 @@
+{% extends 'legal/base.html' %}
+{% block title %}Answers{% endblock %}
+{% block body %} 
+    {% if answer  %}
+    <h3>Legal Answer</h3>
+    <ul>
+        {{ answer.answer }}</a></li>
+    </ul>
+    {% else %}
+    <h3>You dont have any answers</h3>
+    {% endif %}
+{% endblock %}

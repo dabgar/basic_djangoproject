@@ -1,0 +1,28 @@
+{% extends 'legal/base.html' %}
+{% block title %}Legal{% endblock %}
+    {% block body %}
+    {% if all_questions %}
+   
+  
+      <h3>
+        <ol style ="text-align:center;max-width:400px;margin:0 auto;">
+    <h2>Here are all your legal questions</h2>
+    
+   
+        {% for questions in all_questions %}
+        <li style ="text-align:center;max-width:400px;margin:0 auto;"> 
+             <a href="/legal/{{ questions.question_id }}/">{{ questions.question }}
+        </a>
+           
+        </li>
+        {% endfor %}
+    </ol>
+</h3>
+ 
+
+    {% else %}
+    <h3>You dont have any questions</h3>
+
+    {% endif %}
+
+{% endblock %}
